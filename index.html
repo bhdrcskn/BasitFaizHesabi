@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>Basit Faiz Hesaplayıcı</title>
+	<!--Zamanı göstermek için javascript kodu başlangıç-->
+	<div id="clock"></div>
+    <script type="text/javascript">
+    function refrClock()
+    {
+    var d=new Date();
+    var s=d.getSeconds();
+    var m=d.getMinutes();
+    var h=d.getHours();
+    var day=d.getDay();
+    var date=d.getDate();
+    var month=d.getMonth();
+    var year=d.getFullYear();
+    var months=new Array("Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık");
+    if (s<10) {s="0" + s}
+    if (m<10) {m="0" + m}
+    document.getElementById("clock").innerHTML= "<b>Tarih:</b> " + date + " " + months[month] + " " + year + " <b>Saat:</b> " + h + ":" + m + ":" + s + " "
+    setTimeout("refrClock()",1000);
+    }
+    refrClock();
+    </script>
+	<!--Zamanı göstermek için javascript kodu bitiş-->
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+	<!--Basit faiz hesabı içeriği başlangıç-->
+	<div class="maindiv">
+        <h1>Simple Interest Calculator</h1>
+		<form action="" id="mainform">
+    			<p><label>Amount</label> <input type="number"  id="principal"></p> 
+				<p><label>Interest Rate</label> <input type="range"  id="rate" min="1" max="20" step="0.25" value="10.25" oninput="showVal(this.value)" onchange="showVal(this.value)"><span id="showRate"></span></p>
+				<p><label>No. of years</label> <select name="years" id="years">
+          <option value="1">1</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
+		  <option value="7">7</option>
+		  <option value="8">8</option>
+		  <option value="9">9</option>
+		  <option value="10">10</option>
+          </select>
+		</form> 
+		<button onclick="compute()">Compute Interest</button><br><br>
+		<span id="result"></span>
+		<!--Basit faiz hesabı içeriği bitiş-->
+        <footer>
+        &#169;2022 Bahadır Coşkun
+        </footer>
+	</div>
+    </body>
+</html>

@@ -1,3 +1,3 @@
-# IBM Coursera Proje Çalışması-Basit Faiz Hesaplayıcı Oluşturma
-basit-faiz-hesabi.vercel.app
+# IBM Coursera Proje Çalışması-Basit Faiz Hesaplayıcı
+# basit-faiz-hesabi.vercel.app
 
